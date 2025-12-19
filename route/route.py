@@ -10,6 +10,9 @@ router = APIRouter()
 @router.get("/")
 def home_route():
     return {"Well-come to Blog Database"}
+@router.get("/letgetstarted")
+def letgetstarted():
+    return {"Everything is up and doing"}
 
 @router.post("/post-blog", status_code=200)
 async def postman(blog: Blogmodel, response: Response ):
