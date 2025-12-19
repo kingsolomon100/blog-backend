@@ -7,6 +7,10 @@ from conversion.conversion import convertblog, convertblogs
  
 router = APIRouter()
 
+@router.post("/")
+def post():
+    return {"Well-come to Blog Database"}
+
 @router.post("/post-blog", status_code=200)
 async def postman(blog: Blogmodel, response: Response ):
      
