@@ -7,8 +7,8 @@ from conversion.conversion import convertblog, convertblogs
  
 router = APIRouter()
 
-@router.post("/")
-def post():
+@router.get("/")
+def home_route():
     return {"Well-come to Blog Database"}
 
 @router.post("/post-blog", status_code=200)
