@@ -10,7 +10,8 @@ router = APIRouter()
 @router.get("/")
 def home_route():
     return {"Well-come to Blog Database"}
-@router.get("/letgetstarted")
+
+@router.get("/let")
 def letgetstarted():
     return {"Everything is up and doing"}
 
