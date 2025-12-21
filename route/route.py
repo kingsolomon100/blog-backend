@@ -13,7 +13,7 @@ def home_route():
 
 @router.get("/let")
 def letgetstarted():
-    return {"Everything is up and doing"}
+    return {"message": "Everything is up and doing"}
 
 @router.post("/post-blog", status_code=200)
 async def postman(blog: Blogmodel, response: Response ):
