@@ -7,7 +7,7 @@ from conversion.conversion import convertblog, convertblogs
  
 router = APIRouter()
 
-@router.get("/")
+@router.get("/m")
 def home_route():
     return {"Well-come to Blog Database"}
 
