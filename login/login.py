@@ -1,10 +1,11 @@
-from fastapi import APIrouter, status, Response;
-from model.model import Users;
-from conversion.conversion import convertUser; 
-from password_validator import PasswordValidator;
-from myconfiq.myconfiq import Blog;
+from fastapi import APIRouter, status, Response
+from model.model import Users
+from conversion.conversion import convertUser 
+from password_validator import PasswordValidator
+from myconfiq.myconfiq import Blog 
 import validators
 
+signin = APIRouter()
  
 schema = PasswordValidator()
 
@@ -17,7 +18,7 @@ schema\
 .has().digits()\
 .has().no().spaces()\
 
-signin = APIrouter()
+
 
 @signin.post("/sign-in", status_code=200)
 def signInLog(user: Users, response: Response ):
