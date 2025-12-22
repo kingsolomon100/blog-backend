@@ -9,5 +9,11 @@ class Blogmodel(BaseModel):
     image: str = None
     content: str = None
     timedate: int = datetime.now()
+
+
+class Users(BaseModel):
+    username: str = None 
+    password: str = None 
+    email: str = None    
     
  
