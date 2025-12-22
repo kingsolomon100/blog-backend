@@ -11,7 +11,7 @@ router = APIRouter()
 def home_route():
     return {"Well-come to Blog Database"}
 
-@router.get("/momo")
+@router.get("/let")
 def letgetstarted():
     return {"message": "Everything is up and doing"}
 
