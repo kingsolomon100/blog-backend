@@ -6,14 +6,14 @@ from conversion.conversion import convertblog, convertblogs
 # import random 
  
 
- 
+
 router = APIRouter()
 
 @router.get("/")
 def home_route():
     return {"Well-come to Blog Database"} 
 
-@router.get("/momo")
+@router.get("/gomez")
 def letgetstarted():
     return {"message": "Everything is up and doing"}
 
