@@ -9,7 +9,7 @@ router = APIRouter()
 
 @router.get("/")
 def home_route():
-    return {"Well-come to Blog Database"}
+    return {"Well-come to Blog Database"} 
 
 @router.get("/momo")
 def letgetstarted():
