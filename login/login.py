@@ -2,7 +2,7 @@ from fastapi import APIRouter, status, Response
 from model.model import Users
 from conversion.conversion import convertUser 
 from password_validator import PasswordValidator
-from myconfiq.myconfiq import Blog 
+from myconfiq.myconfiq import Userlogin
 import validators
 
 signin = APIRouter()
@@ -43,8 +43,8 @@ def signInLog(user: Users, response: Response ):
           response.status_code = status.HTTP_400_BAD_REQUEST
           return {"error": "Email is not a email address"}
     
-    res = Blog.insert_one(user_dict)
-    result = Blog.find_one({"_id": res.inserted_id})
+    res = Userlogin.insert_one(user_dict)
+    result = Userlogin.find_one({"_id": res.inserted_id})
     return convertUser(result)
     
 
