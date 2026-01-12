@@ -12,8 +12,24 @@ class Blogmodel(BaseModel):
 
 
 class Users(BaseModel):
-    username: str = None 
+    firstname: str = None 
+    lastname: str = None
+    age: str = None
     password: str = None 
-    email: str = None    
+    email: str = None
+
+class Otp(BaseModel):
+    email: str
+
+class VerifyOtp(BaseModel):
+    email: str 
+    otp: int  
+
+
+        
+
+
+
+        
     
  

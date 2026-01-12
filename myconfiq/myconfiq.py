@@ -14,6 +14,7 @@ db = client["My-backend-Blog"]
 # Access the collection
 # userfile = db["Userfile"]
 Blog = db["Blog"]
+Otp_collection = db["Otp_collection"] 
 
 
 try:

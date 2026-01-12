@@ -14,13 +14,17 @@ def convertblogs(projects) -> list:
     return [convertblog(project) for project in projects ]
 
 
-def convertUser(user):
+def convertUser(user) -> dict:
     return {
         "_id": str(user["_id"]),
-        "username": user["username"],
+        "firstname": user["firstname"],
+        "lastname": user["lastname"],
+        "age": user["age"],
         "password": user["password"],
         "email": user["email"]
 
     }
+
+
 
     

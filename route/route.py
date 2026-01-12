@@ -6,16 +6,16 @@ from conversion.conversion import convertblog, convertblogs
 # import random 
  
 
-
+ 
 router = APIRouter()
 
 @router.get("/")
-def home_route():
+def home_route(): 
     return {"Well-come to Blog Database"} 
 
 @router.get("/gomez")
 def letgetstarted():
-    return {"message": "Everything is up and doing"}
+    return {"message": "Everything is up and doing"} 
 
 @router.post("/post-blog", status_code=200)
 async def postman(blog: Blogmodel, response: Response ):
