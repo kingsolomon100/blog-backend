@@ -26,7 +26,7 @@ async def postman(blog: Blogmodel, response: Response ):
         return {"error": "Categories is required"}
     
     if not blog_dict["category"]:
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = status.HTTP_400_BAD_REQUEST 
         return {"error": "Category is required"}
     
     if not blog_dict["title"]:
